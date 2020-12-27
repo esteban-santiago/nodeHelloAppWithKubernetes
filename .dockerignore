@@ -1,0 +1,5 @@
+./node_modules
+./.docker
+./.k8s
+./build.sh
+./run.sh

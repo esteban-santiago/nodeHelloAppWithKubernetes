@@ -1,0 +1,7 @@
+#sudo docker run -it --rm -p 8080:8080 -d nginx-hello 
+FROM nginx:1.17.1-alpine
+COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
+#COPY --from=build /app/dist /usr/share/nginx/html
+#Install SSL certificate
+EXPOSE 8080
+CMD [ "nginx","-g","daemon off;" ]

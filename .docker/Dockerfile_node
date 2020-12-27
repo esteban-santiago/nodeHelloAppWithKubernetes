@@ -1,0 +1,8 @@
+## sudo docker build -t node-hello-nginx -f .docker/Dockerfile .
+# sudo docker run --rm -d -p 3000:3000 node-hello
+FROM node:15-alpine
+WORKDIR /app
+COPY . .
+RUN npm install --production
+EXPOSE 3000
+CMD node app.js
